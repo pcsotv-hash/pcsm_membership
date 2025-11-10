@@ -4,7 +4,7 @@ import base64, hmac, hashlib, json, os
 from uuid import UUID
 
 from ..db import get_db
-from ..models import Member
+from ..models import Member, Payment
 from ..schemas import QRVerifyOut
 
 router = APIRouter(prefix="/api/qr", tags=["qr"])
@@ -42,5 +42,25 @@ def verify(token: str, db: Session = Depends(get_db)):
     elif m.expiry_date and m.expiry_date < datetime.date.today():
         status = "expired"
 
-    return QRVerifyOut(valid=True, member_id=m.id, designation=m.designation, status=status)
+    # Find last successful payment, using metadata timestamp if present
+    last = None
+    try:
+        pays = db.query(Payment).filter(Payment.member_id == m.id, Payment.status == "succeeded").all()
+        def parse_ts(p):
+            try:
+                ts = p.metadata and p.metadata.get("timestamp")
+                if not ts:
+                    return None
+                # Accept ISO date or datetime
+                if len(ts) == 10:
+                    return ts
+                import datetime as dt
+                return dt.datetime.fromisoformat(ts).date().isoformat()
+            except Exception:
+                return None
+        candidates = [parse_ts(p) for p in pays]
+        last = max([c for c in candidates if c], default=None)
+    except Exception:
+        pass
 
+    return QRVerifyOut(valid=True, member_id=m.id, designation=m.designation, status=status, last_payment_date=last)

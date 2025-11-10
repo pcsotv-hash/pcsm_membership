@@ -81,4 +81,3 @@ class AuditLog(Base):
     target_type = Column(String(30))
     target_id = Column(UUID(as_uuid=True))
     metadata = Column(JSON)
-

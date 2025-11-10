@@ -75,3 +75,4 @@ class QRVerifyOut(BaseModel):
     member_id: Optional[UUID] = None
     designation: Optional[str] = None
     status: Optional[str] = None
+    last_payment_date: Optional[str] = None
