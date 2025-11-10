@@ -1,0 +1,37 @@
+name: pcsm_membership
+description: PCSM Membership App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.9.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  dio: ^5.9.0
+  image_picker: ^0.8.7+6
+  fluttertoast: ^8.2.14
+  intl: ^0.20.2
+  provider: ^6.1.5
+  pdf: ^3.10.4
+  printing: ^5.11.0
+  path_provider: ^2.1.5
+  # flutter_windowmanager: ^0.2.0  # Commented out due to Gradle compatibility issues
+  share_plus: ^10.0.0
+  url_launcher: ^6.3.2
+  file_picker: ^8.3.7
+  google_fonts: ^6.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/locations.json
+    - assets/pakistan_cities_complete.json
+    - assets/Logo.png

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PCS Membership Form</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 10px 20px;
+      border-bottom: 2px solid #0a6831;
+    }
+    footer {
+	  border-top: 4px solid #FFD700; /* bright yellow line */
+      margin-top: 40px;
+      padding: 15px 0;
+      text-align: center;
+      background-color: #fff;
+      font-family: 'Noto Nastaliq Urdu', serif;
+}
+
+      .header, footer {
+       max-width: 840px;
+       margin: 0 auto;
+       box-sizing: border-box;
+       width: 100%;
+   }
+
+
+    .logo, .quaid {
+      width: 100px;
+      height: auto;
+    }
+
+    .header-text {
+      flex: 1;
+      text-align: center;
+      color: #0a6831;
+    }
+
+    .header-text h1 {
+      font-size: 36px;
+      margin: 0;
+      font-weight: bold;
+      direction: rtl;
+    }
+
+    .header-text h2 {
+      font-size: 18px;
+      margin: 5px 0 0 0;
+      font-weight: normal;
+    }
+
+    .form-container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+    }
+
+    .form-header {
+      background-color: #00A859;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"], input[type="number"], input[type="date"], select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    input[type="date"] {
+      width: 120px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .row > * {
+      flex: 1;
+    }
+
+    .cnic-inputs {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 5px;
+      justify-content: flex-end;
+    }
+
+    .cnic-inputs input {
+      width: 30px;
+      text-align: center;
+    }
+
+    .photo-container.top-photo {
+      max-width: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .photo-container.top-photo .photo-box {
+      width: 3.2cm;
+      height: 4.2cm;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 12px;
+      text-align: center;
+      padding: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 8px;
+    }
+
+    .photo-container.top-photo .photo-label {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      font-size: 11px;
+      color: #666;
+    }
+
+    .photo-container.top-photo .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-container:not(.top-photo) {
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .photo-container:not(.top-photo) .photo-box {
+      width: 100%;
+      aspect-ratio: 3.39 / 2.13;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+      background-color: #fff;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      height: auto;
+      min-height: 120px;
+    }
+
+    .photo-container:not(.top-photo) .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-title {
+      font-size: 13px;
+      margin-bottom: 4px;
+      text-align: center;
+      color: #444;
+    }
+
+    .submit-button {
+      display: flex;
+      justify-content: center;
+    }
+
+    button[type="submit"] {
+      background-color: #00A859;
+      color: white;
+      padding: 6px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Noto Nastaliq Urdu', serif;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #05703e;
+      color: white;
+      padding: 10px 15px;
+      font-size: 13.5px;
+      direction: ltr;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-title {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-section {
+      width: 48%;
+    }
+
+    footer p {
+      margin: 2px 0;
+      line-height: 1.3;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .social {
+      text-align: center;
+      border-top: 1px solid white;
+      margin-top: 10px;
+      padding-top: 8px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-icons img {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+    }
+
+    @media screen and (max-width: 600px) {
+      .footer-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .error-msg {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+  font-family: 'Noto Nastaliq Urdu', serif;
+}
+/* === MOBILE FIX LAYOUT PATCH === */
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 96%;
+    margin: 10px auto;
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .header, footer {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .header-text h1 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .header-text h2 {
+    font-size: 13px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  input[type="text"], input[type="number"], input[type="date"], select {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .photo-container,
+  .photo-container.top-photo {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .photo-box {
+    width: 100%;
+    height: auto;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    font-size: 17px;
+    padding: 12px;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+  }
+
+  .cnic-inputs {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img class="logo" src="https://i.ibb.co/8Dryrh1Z/Logo-Pakistan-Civil-Soldier-Movement.png" alt="PCS Logo">
+    <div class="header-text">
+      <h1>پاکستان سول سولجر موومنٹ</h1>
+      <h2>Pak Forces, Pak Nation and Pakistan is One</h2>
+    </div>
+    <img class="quaid" src="https://i.ibb.co/0RsRV27C/Quaid-pic.png" alt="Quaid-e-Azam">
+  </div>
+
+  <!-- Form Container -->
+  <div class="form-container">
+    <div class="form-header">رکنیت فارم / Membership Form</div>
+   <form id="membershipForm"
+      method="POST"
+      action="https://script.google.com/macros/s/AKfycbxM7c8JTrzyNLF6lnZpRmaWXIs6jVOvmawZHakxvNMr6Je1EX9Ns2yMQ7W6MT4qgAMP8g/exec"
+      enctype="multipart/form-data"
+      onsubmit="validateForm(event)">
+    <div class="form-group row" style="align-items: flex-start;">
+      <div style="flex: 1;">
+        <div class="form-group">
+          <label>تاریخ / Date</label>
+          <input type="date" name="date">
+        </div>
+      </div>
+      <div class="photo-container top-photo">
+        <div class="photo-box" id="photoPreview">
+          <div class="photo-label">تصویر اپلوڈ کریں / Upload Picture</div>
+        </div>
+        <input type="file" accept="image/*" required onchange="previewPhoto(event)">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div>
+        <label>نام / Name</label>
+        <input type="text" name="name" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+      <div>
+        <label>والد یا شوہر کا نام / Father's/Husband's Name</label>
+        <input type="text" name="father_name" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+    </div>
+
+<div class="form-group">
+  <label>شناختی کارڈ نمبر / CNIC</label>
+  <div class="cnic-inputs">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <span>-</span>
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <input type="text" maxlength="1" oninput="allowDigits(this); moveNext(this)" onkeydown="movePrev(event, this)">
+    <span>-</span>
+    <input type="text" maxlength="1" oninput="allowDigits(this)" onkeydown="movePrev(event, this)">
+  </div>
+    </div>
+
+    <div class="form-group row">
+      <div>
+        <label>موبائل نمبر / Mobile</label>
+        <input type="text" oninput="autoDirection(this)" name="mobile" required placeholder="Enter name as per CNIC">
+      </div>
+      <div>
+        <label>ای میل / Email</label>
+        <input type="text" oninput="autoDirection(this)" name="email" required placeholder="Enter name as per CNIC">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>مستقل پتہ / Permanent Address</label>
+      <input type="text" name="address" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+    </div>
+
+    <div class="form-group row">
+      <div>
+        <label>پیشہ / Occupation</label>
+        <input type="text" name="occupation" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+      <div>
+        <label>تعلیم / Education</label>
+        <input type="text" name="education" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div>
+        <label>صوبہ / Province</label>
+        <input type="text" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+      <div>
+        <label>ڈویژن / Division</label>
+        <input type="text" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+      <div>
+        <label>ضلع / District</label>
+        <input type="text" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div>
+        <label>تحصیل / Tehsil</label>
+        <input type="text" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+      <div>
+        <label>شہر / City</label>
+        <input type="text" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+      <div>
+        <label>یونین کونسل / Union Council</label>
+        <input type="text" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div>
+        <label>عہدہ / Designation</label>
+        <select name="designation" style="font-family: 'Noto Nastaliq Urdu', serif;">
+          <option>صدر</option>
+          <option>سینئر نائب صدر</option>
+          <option>نائب صدر</option>
+          <option>جنرل سیکرٹری</option>
+          <option>ڈپٹی جنرل سیکرٹری</option>
+          <option>ایڈیشنل جنرل سیکرٹری</option>
+          <option>جوائنٹ سیکرٹری</option>
+          <option>ڈپٹی جوائنٹ سیکرٹری</option>
+          <option>انفارمیشن سیکرٹری</option>
+          <option>آفس سیکرٹری</option>
+          <option>لیبر سیکرٹری</option>
+          <option>ہیلتھ سیکرٹری</option>
+          <option>ایجوکیشن سیکرٹری</option>
+          <option>منیارٹی سیکرٹری</option>
+          <option>فنانس سیکرٹری</option>
+          <option>سپورٹس سیکرٹری</option>
+          <option>کوآرڈینیٹر</option>
+          <option>ڈپٹی کوآرڈینیٹر</option>
+          <option>میڈیا کوآرڈینیٹر</option>
+          <option>یوتھ کوآرڈینیٹر</option>
+          <option>لیگل کوآرڈینیٹر</option>
+          <option>کمپلین سیل انچارج</option>
+        </select>
+      </div>
+      <div>
+        <label>عہدے کا علاقہ / Designation Area</label>
+        <input type="text" oninput="autoDirection(this)" required placeholder="Enter name as per CNIC">
+      </div>
+    </div>
+
+    <div class="form-group row" style="margin-top: 30px;">
+      <div class="photo-container">
+        <div class="photo-title">شناختی کارڈ سامنے والا حصہ/ ID Card Front Side</div>
+        <div class="photo-box" id="idCardFrontPreview"></div>
+        <input type="file" accept="image/*" required onchange="previewIdCard(event, 'idCardFrontPreview')">
+      </div>
+      <div class="photo-container">
+        <div class="photo-title">شناختی کارڈ پیچھے والا حصہ/ ID Card Back Side</div>
+        <div class="photo-box" id="idCardBackPreview"></div>
+        <input type="file" accept="image/*" required onchange="previewIdCard(event, 'idCardBackPreview')">
+      </div>
+    </div>
+
+    <div class="submit-button">
+      <button type="submit">جمع کریں / Submit</button>
+    </div>
+  </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-title">Chairman Pakistan Haji Taj Muhammad Khan</div>
+    <div class="footer-container">
+      <div class="footer-section">
+        <p><strong>Central Office:</strong> Behind TCS Office, Super Market, Depalpur, District Okara</p>
+        <p><strong>Head Office:</strong> Head Office:</strong> Khyber4, G-15 Markaz, Islamabad</p>
+      </div>
+      <div class="footer-section" style="text-align: right;">
+        <p><strong>Cell No:</strong> 0302-7161593</p>
+        <p><strong>Head Office:</strong> 051-5535028</p>
+        <p><strong>Helpline:</strong> 044-2708073 | 0300-8690172</p>
+      </div>
+    </div>
+    <div class="social">
+      <p style="margin-bottom: 4px;">Follow us on Social Media</p>
+      <div class="social-icons">
+        <a href="https://facebook.com/pcsmo.official" target="_blank"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" /> Facebook</a>
+        <a href="https://instagram.com/pcsm.official" target="_blank"><img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram" /> Instagram</a>
+        <a href="https://youtube.com/@pcsm.official" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" /> YouTube</a>
+        <a href="https://twitter.com/pcso_official" target="_blank"><img src="https://img.icons8.com/color/48/twitter--v1.png" alt="Twitter" /> Twitter</a>
+        <a href="https://tiktok.com/@pcsm.official" target="_blank"><img src="https://img.icons8.com/color/48/tiktok--v1.png" alt="TikTok" /> TikTok</a>
+        <a href="https://pcso.com.pk" target="_blank"><img src="https://img.icons8.com/color/48/domain.png" alt="Website" /> pcso.com.pk</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script>
+function moveNext(elem) {
+  if (elem.value.length === 1) {
+    let next = elem.nextElementSibling;
+    while (next && next.tagName !== 'INPUT') next = next.nextElementSibling;
+    if (next) next.focus();
+  }
+}
+
+function movePrev(event, elem) {
+  if (event.key === "Backspace" && elem.value === "") {
+    let prev = elem.previousElementSibling;
+    while (prev && prev.tagName !== 'INPUT') prev = prev.previousElementSibling;
+    if (prev) {
+      prev.value = "";
+      prev.focus();
+    }
+  }
+}
+
+function allowDigits(input) {
+  input.value = input.value.replace(/[^0-9]/g, '');
+}
+
+function previewPhoto(event) {
+  const reader = new FileReader();
+  reader.onload = function () {
+    const img = document.createElement("img");
+    img.src = reader.result;
+    const previewBox = document.getElementById("photoPreview");
+    previewBox.innerHTML = "";
+    previewBox.appendChild(img);
+  };
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+function previewIdCard(event, previewId) {
+  const reader = new FileReader();
+  reader.onload = function () {
+    const img = document.createElement("img");
+    img.src = reader.result;
+    const previewBox = document.getElementById(previewId);
+    previewBox.innerHTML = "";
+    previewBox.appendChild(img);
+    previewBox.style.display = 'flex';
+  };
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+function autoDirection(input) {
+  const urduRegex = /[\u0600-\u06FF]/;
+  if (urduRegex.test(input.value)) {
+    input.style.direction = "rtl";
+    input.style.textAlign = "right";
+    input.style.fontFamily = "'Noto Nastaliq Urdu', serif";
+  } else {
+    input.style.direction = "ltr";
+    input.style.textAlign = "left";
+    input.style.fontFamily = "'Times New Roman', serif";
+  }
+}
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbxM7c8JTrzyNLF6lnZpRmaWXIs6jVOvmawZHakxvNMr6Je1EX9Ns2yMQ7W6MT4qgAMP8g/exec";
+const form = document.getElementById("membershipForm");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(scriptURL, { method: "POST", body: formData })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ فارم کامیابی سے جمع ہو گیا! / Form submitted successfully.");
+        downloadFormAsImage(); // download image after successful submit
+        form.reset();
+        document.querySelectorAll(".photo-box img").forEach(img => img.remove());
+      } else {
+        alert("❌ کوئی خرابی ہوئی، براہ کرم دوبارہ کوشش کریں۔");
+      }
+    })
+    .catch(error => {
+      console.error("Error!", error);
+      alert("⚠️ نیٹ ورک یا سرور کی خرابی — براہ کرم دوبارہ کوشش کریں۔");
+    });
+});
+
+function downloadFormAsImage() {
+  const form = document.getElementById("membershipForm");
+  html2canvas(form, { scale: 2 }).then(canvas => {
+    const ctx = canvas.getContext("2d");
+
+    // Watermark text
+    ctx.font = "bold 18px Arial";
+    ctx.fillStyle = "rgba(255, 0, 0, 0.6)";
+    ctx.textAlign = "center";
+    ctx.fillText("For personal use only — PCSM", canvas.width / 2, canvas.height - 50);
+    ctx.fillText("All copyrights reserved. Copy karna mana hai.", canvas.width / 2, canvas.height - 25);
+
+    const link = document.createElement("a");
+    link.download = "PCSM-Membership.jpg";
+    link.href = canvas.toDataURL("image/jpeg", 0.9);
+    link.click();
+  });
+}
+</script>
+</body>
+</html>

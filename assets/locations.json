@@ -1,0 +1,221 @@
+{
+  "Punjab": {
+    "Lahore Division": {
+      "Lahore": ["Ravi", "Shalimar", "Wagah", "Data Gunj Bakhsh", "Iqbal", "Samanabad", "Gulberg", "Aziz Bhatti", "Cantt", "Model Town"],
+      "Kasur": ["Kasur City", "Kot Radha Kishan", "Pattoki", "Chunian", "Raiwind", "Kanganpur"],
+      "Sheikhupura": ["Sheikhupura City", "Ferozewala", "Muridke", "Safdarabad", "Sharaqpur"],
+      "Nankana Sahib": ["Nankana Sahib City", "Sangla Hill", "Shah Kot", "Warburton"]
+    },
+    "Faisalabad Division": {
+      "Faisalabad": ["Faisalabad City", "Samundri", "Tandlianwala", "Jaranwala", "Dijkot"],
+      "Jhang": ["Jhang City", "Shorkot", "Ahmad Pur Sial", "Athara Hazari", "Chiniot"],
+      "Toba Tek Singh": ["Toba Tek Singh City", "Gojra", "Kamalia", "Pirmahal", "Rajana"],
+      "Chiniot": ["Chiniot City", "Bhawana", "Lalian"]
+    },
+    "Rawalpindi Division": {
+      "Rawalpindi": ["Rawalpindi City", "Kahuta", "Kallar Syedan", "Gujar Khan", "Taxila"],
+      "Attock": ["Attock City", "Hazro", "Hasan Abdal", "Fateh Jang", "Pindi Gheb", "Jand"],
+      "Chakwal": ["Chakwal City", "Talagang", "Lawah", "Choa Saidan Shah", "Kallar Kahar"],
+      "Jhelum": ["Jhelum City", "Dina", "Sohawa", "Pind Dadan Khan"]
+    },
+    "Multan Division": {
+      "Multan": ["Multan City", "Bosan", "Shujabad", "Makhdoom Rashid", "Jalalpur Pirwala"],
+      "Khanewal": ["Khanewal City", "Mian Channu", "Kabirwala", "Jahanian", "Tulamba"],
+      "Vehari": ["Vehari City", "Burewala", "Mailsi", "Khanpur"],
+      "Lodhran": ["Lodhran City", "Dunya Pur", "Kahror Pacca"]
+    },
+    "Bahawalpur Division": {
+      "Bahawalpur": ["Bahawalpur City", "Yazman", "Hasilpur", "Khairpur Tamewali", "Ahmadpur East"],
+      "Rahim Yar Khan": ["Rahim Yar Khan City", "Sadiqabad", "Liaquatpur", "Khanpur"],
+      "Bahawalnagar": ["Bahawalnagar City", "Chishtian", "Haroonabad", "Fort Abbas", "Minchinabad"]
+    },
+    "Gujranwala Division": {
+      "Gujranwala": ["Gujranwala City", "Kamoke", "Nowshera Virkan", "Wazirabad"],
+      "Sialkot": ["Sialkot City", "Daska", "Pasrur", "Sambrial", "Zafarwal"],
+      "Narowal": ["Narowal City", "Shakargarh", "Zafarwal"],
+      "Hafizabad": ["Hafizabad City", "Pindi Bhattian"]
+    },
+    "Sargodha Division": {
+      "Sargodha": ["Sargodha City", "Bhalwal", "Kot Momin", "Sahiwal", "Shahpur"],
+      "Khushab": ["Khushab City", "Noorpur Thal", "Quaidabad"],
+      "Mianwali": ["Mianwali City", "Isakhel", "Piplan"],
+      "Bhakkar": ["Bhakkar City", "Darya Khan", "Kallur Kot"]
+    },
+    "Sahiwal Division": {
+      "Sahiwal": ["Sahiwal City", "Chichawatni", "Harappa"],
+      "Okara": ["Okara City", "Renala Khurd", "Depalpur"],
+      "Pakpattan": ["Pakpattan City", "Arifwala"]
+    },
+    "DG Khan Division": {
+      "Dera Ghazi Khan": ["DG Khan City", "Taunsa", "Kot Chutta", "De-Excluded Area"],
+      "Rajanpur": ["Rajanpur City", "Jampur", "Rojhan"],
+      "Muzaffargarh": ["Muzaffargarh City", "Alipur", "Jatoi"]
+    }
+  },
+  "Sindh": {
+    "Karachi Division": {
+      "Karachi Central": ["Nazimabad", "North Nazimabad", "Gulberg"],
+      "Karachi East": ["Gulshan", "Sohrab Goth", "Safoora"],
+      "Karachi South": ["Saddar", "Clifton", "Aram Bagh"],
+      "Karachi West": ["Orangi", "Mominabad", "Ittehad Town"],
+      "Malir": ["Malir", "Jinnah", "Bin Qasim"],
+      "Korangi": ["Korangi", "Landhi", "Shah Faisal"],
+      "Keamari": [["SITE", "Mauripur", "Baldia"]]
+    },
+    "Hyderabad Division": {
+      "Hyderabad": ["Hyderabad City", "Latifabad", "Qasimabad"],
+      "Badin": ["Badin City", "Matli", "Talhar", "Shaheed Fazil Rahu"],
+      "Thatta": ["Thatta City", "Mirpur Sakro", "Ghorabari", "Keti Bunder"],
+      "Sujawal": ["Sujawal City", "Mirpur Bathoro", "Jati"]
+    },
+    "Sukkur Division": {
+      "Sukkur": ["Sukkur City", "Rohri", "Pano Akil", "Salehpat"],
+      "Khairpur": ["Khairpur City", "Kot Diji", "Gambat", "Nara", "Kingri"],
+      "Ghotki": ["Ghotki City", "Mirpur Mathelo", "Daharki", "Khan Garh"],
+      "Ubauro": ["Ubauro City", "Khanpur"]
+    },
+    "Larkana Division": {
+      "Larkana": ["Larkana City", "Ratodero", "Dokri", "Bakrani"],
+      "Qambar Shahdadkot": ["Qambar", "Mirokhan", "Nasirabad", "Qubo Saeed Khan"],
+      "Jacobabad": ["Jacobabad City", "Thul", "Garhi Khairo", "Kandhkot"],
+      "Kashmore": ["Kashmore City", "Kandhkot", "Tangwani"]
+    },
+    "Mirpur Khas Division": {
+      "Mirpur Khas": ["Mirpur Khas City", "Digri", "Jhuddo", "Kot Ghulam Muhammad"],
+      "Umerkot": ["Umerkot City", "Samaro", "Pithoro", "Kunri"],
+      "Tharparkar": ["Mithi", "Nagarparkar", "Chachro", "Diplo"]
+    },
+    "Shaheed Benazirabad Division": {
+      "Shaheed Benazirabad": ["Nawabshah", "Sakrand", "Daur"],
+      "Naushahro Feroze": ["Naushahro Feroze City", "Moro", "Kandiaro"],
+      "Sanghar": ["Sanghar City", "Shahdadpur", "Sinjhoro"]
+    }
+  },
+  "KPK": {
+    "Peshawar Division": {
+      "Peshawar": ["Peshawar City", "Badaber", "Mathra", "Hassan Khel"],
+      "Charsadda": ["Charsadda City", "Tangi", "Shabqadar", "Mandani"],
+      "Nowshera": ["Nowshera City", "Jehangira", "Akora Khattak", "Risalpur"],
+      "Khyber": ["Landi Kotal", "Bara", "Jamrud"]
+    },
+    "Mardan Division": {
+      "Mardan": ["Mardan City", "Takht Bhai", "Katlang", "Rustam"],
+      "Swabi": ["Swabi City", "Topi", "Zaida", "Razar"]
+    },
+    "Abbottabad Division": {
+      "Abbottabad": ["Abbottabad City", "Havelian", "Nawan Shehr", "Lora"],
+      "Haripur": ["Haripur City", "Khalabat", "Khanpur", "Ghazi"],
+      "Mansehra": ["Mansehra City", "Baffa", "Balakot", "Oghi"],
+      "Torghar": ["Judba", "Khander"]
+    },
+    "Swat Division": {
+      "Swat": ["Mingora", "Kabal", "Bahrain", "Barikot", "Matta"],
+      "Shangla": ["Alpuri", "Besham", "Puran", "Chakesar"],
+      "Buner": ["Daggar", "Gagra", "Totalai", "Khudu Khel"]
+    },
+    "Dera Ismail Khan Division": {
+      "Dera Ismail Khan": ["DI Khan City", "Paharpur", "Daraban", "Kulachi"],
+      "Tank": ["Tank City", "Jandola", "Gomal", "Dabara"],
+      "South Waziristan": ["Wana", "Ladha", "Makin"]
+    },
+    "Kohat Division": {
+      "Kohat": ["Kohat City", "Hangu", "Lachi", "Dara Adam Khel"],
+      "Karak": ["Karak City", "Takht-e-Nasrati", "Banda Daud Shah"],
+      "Orakzai": ["Kalaya", "Ghiljo"]
+    },
+    "Bannu Division": {
+      "Bannu": ["Bannu City", "Domel", "Kakki", "Miryan"],
+      "North Waziristan": ["Miranshah", "Razmak", "Datta Khel"],
+      "Lakki Marwat": ["Lakki Marwat City", "Serai Naurang", "Tajazai"]
+    },
+    "Hazara Division": {
+      "Battagram": ["Battagram City", "Allai", "Chamla"],
+      "Upper Kohistan": ["Dasu", "Dassu", "Pattan"],
+      "Lower Kohistan": ["Pattan", "Dubair", "Ranolia"]
+    }
+  },
+  "Balochistan": {
+    "Quetta Division": {
+      "Quetta": ["Quetta City", "Gulistan", "Sariab", "Zarghoon", "Panjpai"],
+      "Pishin": ["Pishin City", "Killa Abdullah", "Barshore", "Bostan"],
+      "Chaman": ["Chaman City", "Qila Saifullah", "Gulistan"]
+    },
+    "Kalat Division": {
+      "Kalat": ["Kalat City", "Mangochar", "Gazg", "Kharan"],
+      "Khuzdar": ["Khuzdar City", "Wadh", "Nall", "Zehri", "Baghbana"],
+      "Awaran": ["Awaran City", "Jhal Jhao", "Gishkaur", "Korak"],
+      "Mastung": ["Mastung City", "Dasht", "Khad Koocha"]
+    },
+    "Makran Division": {
+      "Gwadar": ["Gwadar City", "Jiwani", "Ormara", "Pasni", "Surbandar"],
+      "Kech": ["Turbat", "Mand", "Tump", "Buleda", "Gowargo"],
+      "Panjgur": ["Panjgur City", "Gowargo", "Paroom", "Chitkan"]
+    },
+    "Zhob Division": {
+      "Zhob": ["Zhob City", "Ashwat Sub", "Sherani", "Killa Saifullah"],
+      "Killa Saifullah": ["Killa Saifullah City", "Muslim Bagh", "Loiband", "Kan Mehterzai"],
+      "Sherani": ["Sherani Subdivision", "Mina Bazar"]
+    },
+    "Nasirabad Division": {
+      "Nasirabad": ["Nasirabad City", "Dera Murad Jamali", "Chhatar", "Usta Muhammad"],
+      "Jafarabad": ["Jafarabad City", "Gandakha", "Usta Muhammad", "Dera Allah Yar"],
+      "Sibi": ["Sibi City", "Lehri", "Kutmandai", "Sangan"],
+      "Usta Muhammad": ["Usta Muhammad City", "Gandakha"]
+    },
+    "Loralai Division": {
+      "Loralai": ["Loralai City", "Barkhan", "Musakhail", "Duki"],
+      "Barkhan": ["Barkhan City", "Duki", "Musakhail", "Kingri"],
+      "Musakhail": ["Musakhail City", "Rarasham", "Toi Khulla"],
+      "Duki": ["Duki City", "Bori", "Shahrig"]
+    },
+    "Rakhshan Division": {
+      "Chagai": ["Chagai City", "Dalbandin", "Nokkundi", "Taftan"],
+      "Kharan": ["Kharan City", "Sar Kharan", "Toba Achakzai"],
+      "Washuk": ["Washuk City", "Besima", "Mashkel"]
+    },
+    "Sibi Division": {
+      "Kohlu": ["Kohlu City", "Mawand", "Kahan"],
+      "Dera Bugti": ["Dera Bugti City", "Phelawagh", "Sui"],
+      "Ziarat": ["Ziarat City", "Sinjavi", "Sanjawi"],
+      "Harnai": ["Harnai City", "Shahrig", "Khost"]
+    }
+  },
+  "Azad Kashmir": {
+    "Mirpur Division": {
+      "Mirpur": ["Mirpur City", "Dadyal", "Chakswari", "Afzalpur"],
+      "Kotli": ["Kotli City", "Sehnsa", "Khuiratta", "Charhoi", "Fatehpur"],
+      "Bhimber": ["Bhimber City", "Samahni", "Barnala", "Chowki"]
+    },
+    "Muzaffarabad Division": {
+      "Muzaffarabad": ["Muzaffarabad City", "Athmaqam", "Palandri", "Pattan"],
+      "Neelum": ["Athmaqam", "Sharda", "Kel", "Taobat"],
+      "Haveli": ["Hajeera", "Khurshidabad", "Lawa", "Abbaspur"]
+    },
+    "Poonch Division": {
+      "Poonch": ["Rawalakot", "Hajira", "Thorar", "Baloch"],
+      "Bagh": ["Bagh City", "Dhirkot", "Hari Gehal"],
+      "Sudhnoti": ["Pallandri", "Baloch", "Mong", "Azad Pattan"]
+    }
+  },
+  "Gilgit-Baltistan": {
+    "Gilgit Division": {
+      "Gilgit": ["Gilgit City", "Danyore", "Jutial", "Bagrote"],
+      "Hunza": ["Aliabad", "Gulmit", "Sost", "Gojal"],
+      "Nagar": ["Chalt", "Nagarkhas", "Hispar", "Silk Route"]
+    },
+    "Baltistan Division": {
+      "Skardu": ["Skardu City", "Gultari", "Shigar", "Rondu"],
+      "Ghanche": ["Khaplu", "Machulu", "Hushe", "Thalay"],
+      "Astore": ["Eidgah", "Gorikot", "Rama", "Chilum"]
+    },
+    "Diamer Division": {
+      "Diamer": ["Chilas", "Darel", "Tangir", "Babusar"],
+      "Ghizer": ["Gahkuch", "Ishkoman", "Yasin", "Phander"]
+    }
+  },
+  "Islamabad Capital Territory": {
+    "Islamabad Division": {
+      "Islamabad": ["Sectors F-5, F-6, F-7, F-8, F-10, F-11", "Sectors G-5, G-6, G-7, G-8, G-9, G-10, G-11", "Sectors H-8, H-9, H-10, H-11, H-12, H-13", "Sectors I-8, I-9, I-10, I-11", "Blue Area", "Constitution Avenue", "Parliament House", "Supreme Court", "Prime Minister House", "President House", "Diplomatic Enclave", "Faisal Mosque", "Margalla Hills", "Rawal Lake", "Fatima Jinnah Park", "Lake View Park", "Jinnah Super Market", "Aabpara Market", "Melody Market", "G-9 Markaz", "F-6 Markaz", "F-10 Markaz", "F-11 Markaz", "G-11 Markaz", "H-8 Markaz", "I-8 Markaz", "I-10 Markaz", "Bahria Town", "DHA Islamabad", "Gulberg Greens", "PWD Colony", "Media Town", "River Gardens", "Pakistan Town", "Koral", "Tarlai", "Alipur", "Farash", "Shah Allah Ditta", "Saidpur Village", "Bari Imam", "Nurpur Shahan", "Rawat", "Tarnol", "G-13", "G-14", "G-15", "G-16", "E-7", "E-8", "E-9", "E-10", "E-11", "D-10", "D-11", "D-12", "C-13", "C-14", "C-15"]
+    }
+  }
+}

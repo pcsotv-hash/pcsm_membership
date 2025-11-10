@@ -1,0 +1,111 @@
+You will continue and finish the entire Flutter + PHP membership project named "pcsm_membership" from its current state. Do not ask clarification questions — assume missing details below where reasonable. Deliver a fully working Android app (APK, debug build + release build instructions), admin features inside the same app (role-based), and documentation for deployment. Work to completion: UI, dropdowns, API integration, file uploads, PDF/JPG download with watermark, screenshot protection, exports, and test cases.
+
+Project context & paths:
+- Local project folder: C:\pcsm_membership
+- Flutter SDK already installed and project runs on Android device.
+- Backend already exists on shared hosting: /home4/pcsocomp/public_html/pcsm_api/
+- Primary API endpoint for form submit (live): https://pcso.com.pk/pcsm_api/submit_form.php  (or use exact hosting path: /home4/pcsocomp/public_html/pcsm_api/submit_form.php)
+- Admin credentials for testing: username: admin, password: pcsm2025
+- Assets in project root: assets/locations.json and assets/pakistan_cities_complete.json, assets/Logo.png, Form style HTML reference (Form style.html) available in repo.
+
+High-level requirements (complete, exact):
+1. UI: replicate **Form style.html** exactly for mobile (Android-first) — fonts, spacing, card style, green header, logo, date box, footer with social/contact. Use RTL by default but allow toggling LTR. Make it mobile responsive (single-column). Place header, date/time, image upload area, then form fields in same visual order as HTML reference. Use same colors and rounded cards.
+
+2. Fields & behavior:
+   - Full Name (text)
+   - Father Name (text)
+   - CNIC: numeric keyboard, exactly 13 digits validation; automatically move focus to next field on complete.
+   - Mobile: phone keyboard, basic validation (10–15 digits, allow +).
+   - Province → Division → District → Tehsil → City: linked dependent dropdowns.
+     • Load Province/Division/District from assets/locations.json.
+     • Load City lists from assets/pakistan_cities_complete.json (if a district key exists use dropdown; otherwise let user type).
+     • If JSON is missing or incomplete, provide manual entry fallback for each field.
+     • After user fills a level, automatically load next level and scroll/focus to it.
+   - UC (manual)
+   - Address (multiline)
+   - Education, Profession, Designation, Designation Area (as in HTML form)
+   - All required fields validated client-side with inline error messages.
+
+3. Uploads:
+   - Photo, CNIC front, CNIC back — pick from gallery or camera.
+   - Immediately show preview thumbnails in upload area.
+   - Before final submit show a **preview modal** with pictures + text summary and Confirm/Cancel.
+
+4. Screenshot & screen-record protection:
+   - Implement Android secure flag (FLAG_SECURE). Do NOT use problematic plugin that breaks build. Add native approach in Android manifest or MainActivity.
+   - On iOS, document what is possible (no extra implementation required now).
+
+5. Submit behavior:
+   - On confirm, POST multipart/form-data to `/pcsm_api/submit_form.php` (base URL set via constants).
+   - Field names should match DB column names (use camelCase mapping): name, fatherName, cnic, phone, address, province, division, district, tehsil, city, uc, education, profession, designation, designationArea, submitted_at.
+   - Files named: photo (photo), cnic_front (cnicFront), cnic_back (cnicBack).
+   - Show upload progress bar and disable UI while uploading.
+   - Handle responses:
+     • success: respond with status 1 and member id -> navigate to Success screen.
+     • duplicate CNIC: show a clear user-friendly message (CNIC already registered).
+     • error: show server error message.
+
+6. Success screen:
+   - Show member details summary and two actions:
+     • Download Membership Card (PDF) — generated client-side immediately using pdf package.
+       - Watermark text (English only): "For personal reference only PCSM all rights reserved"
+       - Footer: contact phone / website / social links.
+       - Provide option to Save or Share (use printing/share_plus).
+     • View Downloads & Manshoor (open Downloads page in app which lists server-hosted PDFs like manifesto if available - link to API or static files).
+
+7. Admin panel (in same app, behind login):
+   - Admin login screen using admin credentials endpoint (existing backend `admin_login.php` or similar). If endpoint not available, stub a login that checks admin,pcsm2025 locally and flag role=super_admin.
+   - After login show Admin Dashboard:
+     • Member list with filters: Pending / Approved / Rejected / All.
+     • Each member row shows name, CNIC, thumbnail, status, view details, approve/reject actions.
+     • Approve/Reject calls backend admin update endpoint (e.g., admin/update_status.php).
+     • Export buttons: Export Excel / PDF (call server export endpoints or open provided export URLs).
+   - Role-based UI: super_admin can add/remove admins and download full lists; admin can only approve/reject.
+
+8. File paths & constants:
+   - Centralize config: lib/utils/constants.dart with baseUrl = "https://pcso.com.pk/pcsm_api/" and uploadsPublic accordingly.
+   - Document if baseUrl needs editing for staging vs production.
+
+9. PDF & JPG downloadable resources:
+   - Downloads page must list server-side files (manshoor, lists). Create UI and link to server download endpoints (e.g., pcsm_api/download_manshoor.php or direct links).
+   - Local PDF generation for membership card must include watermark and look professional.
+
+10. Build & deliverables:
+    - Produce debug APK and a signed release APK (or provide step-by-step release build instructions).
+    - Commit all code changes with clear commit messages (one commit per major change).
+    - Provide a single ZIP with:
+      • full updated repo,
+      • debug APK,
+      • release build instructions,
+      • short README with how to change baseUrl, how to run, and admin credentials.
+
+11. Quality & tests:
+    - Provide list of manual test cases (smoke tests) and run them locally; report pass/fail in deliverable.
+    - Ensure no Flutter plugin breaks the build on current Flutter stable channel (avoid older plugins that require AGP changes).
+
+12. Handover notes (must include in final delivery):
+    - Locations.json conversion notes (if you normalize geojson -> simplified JSON).
+    - Which server endpoints are required and example request/response format for each (submit_form.php, admin_login.php, get_members.php, export endpoints).
+    - Where to change upload folder path and baseUrl.
+    - Known limitations and recommended next improvements.
+
+Implementation constraints:
+- Do not alter existing backend DB structure.
+- If a backend endpoint is absent for admin actions, implement UI that uses placeholders and include patch notes specifying required endpoint signatures.
+- Use provider or plain setState for state handling — keep implementation simple and maintainable.
+- All code must be placed under C:\pcsm_membership\lib and follow existing project structure.
+
+Acceptance criteria (before handing over):
+- App runs on Android device without build errors.
+- All form dropdowns load and link correctly from provided JSONs or fallback to manual.
+- Upload previews show immediately and final submit success returns and displays Generated PDF option.
+- Admin login works and admin can approve/reject and export.
+- Debug APK included and instructions to build release provided.
+- README and test-case results provided.
+
+Now continue developing and commit changes. When you finish, produce:
+1) Updated repo zipped,
+2) Debug APK,
+3) README with run/build/deploy instructions,
+4) Small test report showing what you tested and results,
+5) Exact list of new/modified files and any server-side changes required.
